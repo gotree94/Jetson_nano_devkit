@@ -42,3 +42,43 @@
    * Omniverse : A powerful multi-GPU real-time simulation and collaboration platform for 3D production pipelines.
  
 
+1단계: Jetson Nano 설정 (TigerVNC 서버)
+먼저 Jetson Nano에 접속하여 TigerVNC를 설치하고 설정을 완료해야 합니다.
+
+TigerVNC 및 데스크탑 환경 설치 (가벼운 XFCE 추천)
+
+Bash
+sudo apt update
+sudo apt install tigervnc-standalone-server tigervnc-xorg-extension xfce4 xfce4-goodies -y
+VNC 비밀번호 설정
+
+Bash
+vncpasswd
+VNC 서버 실행 (최초 실행 시 설정 파일이 생성됩니다)
+
+Bash
+vncserver :1 -geometry 1920x1080 -depth 24
+:1은 디스플레이 번호를 뜻하며, 포트 번호 5901에 대응됩니다.
+
+2단계: MobaXterm에서 접속 (VNC Session)
+이제 윈도우 PC에서 MobaXterm을 실행합니다.
+
+방법 A: 일반 VNC 세션 연결
+동일한 네트워크(LAN)에 있다면 바로 연결할 수 있습니다.
+
+상단의 Session 버튼 클릭 -> VNC 선택.
+
+Remote hostname: Jetson Nano의 IP 주소를 입력.
+
+Port: 5901 입력 (디스플레이 번호 :1 기준).
+
+OK를 누르고 아까 설정한 VNC 비밀번호를 입력하면 화면이 뜹니다.
+
+방법 B: SSH 터널링을 이용한 보안 연결 (강력 추천)
+네트워크 보안이 중요하거나 외부망에서 접속할 때 유용합니다.
+
+MobaXterm의 Session -> VNC 설정 창에서 Network settings 탭으로 이동합니다.
+
+SSH Gateway (jump host) 설정을 활성화하여 Jetson Nano의 SSH 정보(IP, ID)를 입력합니다.
+
+이렇게 하면 VNC 데이터가 SSH 암호화 통로를 통해 전달되므로 훨씬 안전합니다.
