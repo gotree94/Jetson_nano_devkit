@@ -17,6 +17,7 @@
    * Pin and function names guides : https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide
    * Jetson PCN Center
 
-
+* Get Started with NVIDIA Jetson
+   * https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit
 
 
