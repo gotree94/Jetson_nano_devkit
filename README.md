@@ -12,10 +12,9 @@
 
 * Jetson Nano
    * Jetson Nano System-on-Module Data Sheet : https://developer.nvidia.com/embedded/dlc/jetson-nano-system-module-datasheet
-   * Jetson Developer Kit user guides
-   * Jetson module datasheets
-   * Jetson Linux Developer Guide
-   * Pin and function names guides
+   * Jetson Developer Kit user guides : https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide
+   * Jetson Linux Developer Guide  : https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/index.html
+   * Pin and function names guides : https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide
    * Jetson PCN Center
 
 
