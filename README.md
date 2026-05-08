@@ -15,6 +15,7 @@
    * Jetson Developer Kit user guides : https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide
    * Jetson Linux Developer Guide  : https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/index.html
    * Pin and function names guides : https://developer.nvidia.com/embedded/learn/jetson-nano-2gb-devkit-user-guide
+   * Jetson Nano Developer Kit Carrier Board Specification : https://developer.nvidia.com/jetson-nano-developer-kit-carrier-board-p3449-b01-specification
    * Jetson PCN Center
 
 * Get Started with NVIDIA Jetson
