@@ -54,7 +54,7 @@
    * Omniverse
        * A powerful multi-GPU real-time simulation and collaboration platform for 3D production pipelines.
 
- ## Jetson Nano에 MobaXterm과 TigerVNC를 조합하여 리모트 접속
+## Jetson Nano에 MobaXterm과 TigerVNC를 조합하여 리모트 접속
 
 ### 1단계: Jetson Nano 설정 (TigerVNC 서버)
    * 먼저 Jetson Nano에 접속하여 TigerVNC를 설치하고 설정을 완료해야 합니다.
