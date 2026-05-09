@@ -27,19 +27,32 @@
    * https://github.com/dusty-nv/jetbot_ros#jetbot-model-for-gazebo-robotics-simulator%5B/url%5D
  
 * Nvidia Solution
-   * CUDA Toolkit : Toolkit for GPU-accelerated apps: libraries, debugging/optimization tools, a C/C++ compiler, and a runtime.
-   * NVIDIA HPC SDK : A comprehensive suite of C, C++, and Fortran compilers, libraries, and tools for GPU-accelerating HPC applications.
-   * CUDA-X Libraries : GPU-accelerated libraries delivering improved performance across a wide variety of application domains.
-   * Jetson : Embedded solutions for automomous machines and edge computing.
-   * Isaac : Robotic AI development and simulation platform.
-   * Clara : Frameworks for AI-powered imaging, genomics, and smart sensors.
-   * DRIVE : Platform for autonomous vehicles, data center-hosted simulation, and neural network training.
-   * Metropolis : Solutions for smart cities, intelligent video analytics, and more.
-   * Gameworks : Tools, samples and libraries for real-time graphics and physics.
-   * Riva : Framework for multimodal conversational AI.
-   * Developer Tools : IDE plugins, debugging, performance optimization, and other tools.
-   * Graphics Research Tools : Tools, libraries, and samples from NVIDIA Research.
-   * Omniverse : A powerful multi-GPU real-time simulation and collaboration platform for 3D production pipelines.
+   * CUDA Toolkit
+       * Toolkit for GPU-accelerated apps: libraries, debugging/optimization tools, a C/C++ compiler, and a runtime.
+   * NVIDIA HPC SDK
+       * A comprehensive suite of C, C++, and Fortran compilers, libraries, and tools for GPU-accelerating HPC applications.
+   * CUDA-X Libraries
+       * GPU-accelerated libraries delivering improved performance across a wide variety of application domains.
+   * Jetson
+       * Embedded solutions for automomous machines and edge computing.
+   * Isaac
+       * Robotic AI development and simulation platform.
+   * Clara
+       * Frameworks for AI-powered imaging, genomics, and smart sensors.
+   * DRIVE
+       * Platform for autonomous vehicles, data center-hosted simulation, and neural network training.
+   * Metropolis
+       * Solutions for smart cities, intelligent video analytics, and more.
+   * Gameworks
+       * Tools, samples and libraries for real-time graphics and physics.
+   * Riva
+       * Framework for multimodal conversational AI.
+   * Developer Tools
+       * IDE plugins, debugging, performance optimization, and other tools.
+   * Graphics Research Tools
+       * Tools, libraries, and samples from NVIDIA Research.
+   * Omniverse
+       * A powerful multi-GPU real-time simulation and collaboration platform for 3D production pipelines.
 
  ## Jetson Nano에 MobaXterm과 TigerVNC를 조합하여 리모트 접속
 
