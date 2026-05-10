@@ -104,8 +104,8 @@ cat /proc/device-tree/model
 ```
 
 ```
-gotree94@gotree94-desktop2:~$ cat /proc/device-tree/model
-NVIDIA Jetson Nano Developer Kitgotree94@gotree94-desktop2:~$ 
+~$ cat /proc/device-tree/model
+NVIDIA Jetson Nano Developer Kit
 ```
 
 출력 예시:
