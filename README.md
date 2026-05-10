@@ -151,3 +151,77 @@ sudo tegrastats
 
 * Orin Nano와 Orin Nano Super는 하드웨어가 같고, 전력/클럭 설정과 JetPack 버전으로 구분됩니다. 가장 정확한 방법은 GPU 최대 주파수를 확인하는 것입니다.
 
+---
+
+* Jetson Nano 환경에서 Firefox를 설치하는 방법입니다. Snap 버전은 Jetson에서 CPU 100% 먹는 문제가 있으니 반드시 Mozilla PPA로 설치해야 합니다.
+
+* JetPack 버전 확인 (선행)
+```
+cat /etc/nv_tegra_release
+# 또는
+cat /etc/os-release  # Ubuntu 버전 확인
+```
+
+* 방법 1: Mozilla PPA (권장 — JetPack 5/6, Ubuntu 20.04/22.04)
+```
+# Snap으로 깔린 Firefox가 있다면 먼저 제거
+sudo snap remove firefox
+
+# Mozilla PPA 추가
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt update
+
+# Snap보다 PPA 우선순위 높게 설정
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+
+# 설치
+sudo apt install firefox
+```
+
+* 방법 2: 직접 .deb 다운로드 (JetPack 4.x, Ubuntu 18.04)
+* PPA가 18.04를 지원하지 않으므로 ARM64 .deb를 직접 받아야 합니다.
+```
+# Snap 제거
+sudo snap remove firefox
+
+# 최신 ARM64 Firefox .deb 찾기 (런치패드에서 확인)
+# https://launchpad.net/~ubuntu-mozilla-security/+archive/ubuntu/ppa/+builds?build_text=&build_state=all
+# arm64, ubuntu focal (20.04) 용 최신 빌드 링크를 복사
+
+# 예시 (최신 버전에 맞게 URL 변경 필요)
+wget -O firefox.deb "https://launchpad.net/~ubuntu-mozilla-security/+archive/ubuntu/ppa/+build/ID/build_id/+files/firefox_VERSION_arm64.deb"
+
+# 설치
+sudo apt install ./firefox.deb -y
+
+# PPA 등록해서 업데이트 받을 수 있도록
+sudo add-apt-repository ppa:mozillateam/ppa
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+
+# 이후 업데이트
+sudo apt update
+sudo apt upgrade firefox -y
+```
+
+* 방법 3: Flatpak (대안)
+```
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox
+```
+
+* ⚠️ 중요: Snap 버전 쓰지 마세요
+* Jetson Nano의 Ubuntu 22.04+에서 snap Firefox는 하드웨어 가속이 안 되어 CPU만 100% 먹습니다. 반드시 위 방법(PPA 또는 Flatpak)을 사용하세요.
+* JetPack 6 (Ubuntu 22.04) 기준 가장 간단한 명령어 한 줄 요약:
+```
+sudo snap remove firefox 2>/dev/null; sudo add-apt-repository ppa:mozillateam/ppa -y; sudo apt update; sudo apt install firefox -y
+```
+
