@@ -145,8 +145,9 @@ sudo tegrastats
 요약: 구분 기준
 | 모델	| /proc/device-tree/model	| GPU 최대 클럭	| Tensor Core | 
 |:-------------:|:-------------:|:-------------:|:-------------:|
-| Jetson Nano	Jetson Nano	| 921 MHz (Maxwell)	| 없음 | 
-| Jetson Orin Nano	Orin Nano	| 625 MHz	(Ampere) |  있음  | 
-| Jetson Orin Nano Super Orin Nano (동일)	| 800 MHz	| 있음 | 
+| Jetson Nano	| Jetson Nano	| 921 MHz (Maxwell)	| 없음 | 
+| Jetson Orin Nano	| Orin Nano	| 625 MHz	(Ampere) |  있음  | 
+| Jetson Orin Nano Super | Orin Nano (동일)	| 800 MHz	| 있음 | 
+
 * Orin Nano와 Orin Nano Super는 하드웨어가 같고, 전력/클럭 설정과 JetPack 버전으로 구분됩니다. 가장 정확한 방법은 GPU 최대 주파수를 확인하는 것입니다.
 
