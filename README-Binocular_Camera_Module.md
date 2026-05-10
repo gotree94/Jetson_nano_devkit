@@ -8,7 +8,7 @@
 ## IMX219-83 Stereo Camera
 ### Waveshare IMX219-83 Stereo Camera Module
 
-<img src="001.png" width="30%"> <img src="002.png" width="30%"> <br>
+<img src="001.png" width="45%"> <img src="002.png" width="45%"> <br>
 <img src="003.png" width="60%"> <br>
 <img src="066.png"> <br>
 
