@@ -79,7 +79,7 @@
 <img src="001.png" width="60%"> <br> 
 <img src="002.png" width="60%"> <br>
 <img src="003.png" width="60%"> <br>
-<img src="066.png"> <br>
+<img src="066.png" width="80%"> <br>
 
 ## Overview
 
