@@ -16,6 +16,29 @@ Dual IMX219 camera module with 8 Megapixels per camera and onboard ICM20948 9-ax
 ---
 
 ## Specifications
+   * 8 Megapixels
+   * Sensor: Sony IMX219
+   * Resolution: 3280 × 2464 (per camera)
+   * Lens specifications:
+      * CMOS size: 1/4inch
+      * Focal Length: 2.6mm
+      * Angle of View: 83/73/50 degree (diagonal/horizontal/vertical)
+      * Distortion: <1%
+      * Baseline Length: 60mm
+   * ICM20948:
+      * Accelerometer:
+         * Resolution: 16-bit
+         * Measuring Range (configurable): ±2, ±4, ±8, ±16g
+         * Operating Current: 68.9uA
+      * Gyroscope:
+         * Resolution: 16-bit
+         * Measuring Range (configurable): ±250, ±500, ±1000, ±2000°/sec
+         * Operating Current: 1.23mA
+      * Magnetometer:
+         * Resolution: 16-bit
+         * Measuring Range: ±4900μT
+         * Operating Current: 90uA
+   * Dimension: 24mm × 85mm
 
 ### Camera (Sony IMX219)
 
