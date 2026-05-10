@@ -93,3 +93,60 @@ vncserver :1 -geometry 1920x1080 -depth 24
       * 1. MobaXterm의 Session -> VNC 설정 창에서 Network settings 탭으로 이동합니다.
       * 2. SSH Gateway (jump host) 설정을 활성화하여 Jetson Nano의 SSH 정보(IP, ID)를 입력합니다.
       * 3. 이렇게 하면 VNC 데이터가 SSH 암호화 통로를 통해 전달되므로 훨씬 안전합니다.
+
+---
+
+# Jetson 보드 모델을 확인하는 방법
+
+1. /proc/device-tree/model 읽기 (가장 확실)
+```
+cat /proc/device-tree/model
+```
+출력 예시:
+```
+NVIDIA Jetson Nano Developer Kit → Jetson Nano
+NVIDIA Jetson Orin Nano Developer Kit → Jetson Orin Nano
+NVIDIA Jetson AGX Orin Developer Kit → Jetson AGX Orin (Orin Nano Super 아님)
+```
+
+2. Orin Nano Super 특별 확인
+Orin Nano Super는 JetPack 6.2+ 에서 지원되며, Orin Nano와 동일한 하드웨어에서 소프트웨어 업그레이드로 성능이 향상된 모델입니다. 다음 명령어로 추가 확인:
+```
+# NVIDIA SoC 정보
+cat /proc/device-tree/compatible
+
+# CPU 정보
+lscpu | grep "Model name"
+
+# GPU 정보
+cat /proc/device-tree/gpu-name
+# 또는
+cat /sys/devices/gpu.0/device
+
+# Max GPU frequency (Orin Nano vs Super 구분 포인트)
+sudo cat /sys/kernel/debug/bpmp/debug/clk/gpu/max_rate
+# Orin Nano: 625 MHz
+# Orin Nano Super: 800 MHz (또는 750MHz)
+```
+
+3. jetson_release.py (가장 user-friendly)
+```
+# 있으면 실행
+cat /etc/nv_tegra_release
+# 또는
+python3 -c "import subprocess; print(subprocess.check_output(['head', '-n', '1', '/etc/nv_tegra_release']).decode())"
+```
+
+4. tegrastats 로 GPU 주파수 확인
+```
+sudo tegrastats
+```
+
+요약: 구분 기준
+| 모델	| /proc/device-tree/model	| GPU 최대 클럭	| Tensor Core | 
+|:-------------:|:-------------:|:-------------:|
+| Jetson Nano	Jetson Nano	| 921 MHz (Maxwell)	| 없음 | 
+| Jetson Orin Nano	Orin Nano	| 625 MHz	(Ampere) |  있음  | 
+| Jetson Orin Nano Super Orin Nano (동일)	| 800 MHz	| 있음 | 
+* Orin Nano와 Orin Nano Super는 하드웨어가 같고, 전력/클럭 설정과 JetPack 버전으로 구분됩니다. 가장 정확한 방법은 GPU 최대 주파수를 확인하는 것입니다.
+
