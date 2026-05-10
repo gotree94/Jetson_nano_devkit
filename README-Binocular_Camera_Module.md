@@ -979,10 +979,38 @@ A: The IMX219-83 does not feature hardware synchronization, making frame synchro
 
 ---
 
-## Support
+## IMX219 Series Camera Module Selection Guide
 
-For technical support or feedback, submit a ticket via the [Waveshare support page](https://www.waveshare.com/support.htm).
+Comparison of Waveshare IMX219-based camera modules.
 
-- **Working Hours**: 9 AM – 6 PM GMT+8 (Monday to Friday)
-- **Response Time**: 1–2 working days
+| Product | Pixels | Sensor | Infrared | Cameras | FoV (Diag.) | Aperture (F) | Focal Length | PCBA | Compatible Platforms |
+|---------|--------|--------|----------|---------|-------------|--------------|--------------|------|---------------------|
+| RPi Camera V2 | 8 Mega | IMX219 | × | 1 | 62.2° | 2.0 | 3.04 mm | √ | Raspberry Pi, CM3/3+/4, Jetson Nano, Jetson Xavier NX, VisionFive2 |
+| RPi NoIR Camera V2 | 8 Mega | IMX219 | √ | 1 | 62.2° | 2.0 | 3.04 mm | √ | Raspberry Pi, CM3/3+/4, Jetson Nano, VisionFive2 |
+| IMX219-77 Camera | 8 Mega | IMX219 | × | 1 | 79.3° | 2.0 | 2.85 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-77IR Camera | 8 Mega | IMX219 | √ | 1 | 79.3° | 2.0 | 2.85 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-120 Camera | 8 Mega | IMX219 | × | 1 | 120° | 2.0 | 1.79 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-160 Camera | 8 Mega | IMX219 | × | 1 | 160° | 2.35 | 3.15 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-160IR Camera | 8 Mega | IMX219 | √ | 1 | 160° | 2.35 | 3.15 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-160 IR-CUT Camera | 8 Mega | IMX219 | √ | 1 | 162.4° | 2.7 | 1.75 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-170 Camera | 8 Mega | IMX219 | × | 1 | 170° | 2.4 | 2.2 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| IMX219-200 Camera | 8 Mega | IMX219 | × | 1 | 200° | 2.0 | 0.87 mm | √ | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+| **IMX219-83 Stereo Camera** | **8 Mega** | **IMX219** | **×** | **2** | **83°** | **2.4** | **2.6 mm** | **√** | **Raspberry Pi, CM3/3+/4, Jetson series** |
+| IMX219-D160 | 8 Mega | IMX219 | × | 1 | 160° | 2.35 | 3.15 mm | × | Raspberry Pi, CM3/3+/4, Jetson series, VisionFive2 |
+
+## Key
+
+| Symbol | Meaning |
+|--------|---------|
+| √ | Yes / Supported |
+| × | No / Not supported |
+
+## Notes
+
+- **All modules** use the Sony IMX219 sensor (8 Megapixels, 3280 × 2464).
+- **Infrared**: `√` indicates NoIR version (no infrared filter).
+- **PCBA**: `×` means the module is sold as a bare board without the PCBA adapter.
+- **IMX219-83** is the only stereo (dual camera) model in the lineup.
+
+
 
