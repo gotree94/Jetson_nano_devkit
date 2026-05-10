@@ -6,23 +6,24 @@
 
 ---
 
-모듈 0 — 개발 환경 구축 및 시스템 초기화
-모듈 1 — GPIO 디지털 입출력
-모듈 2 — PWM (Pulse Width Modulation)
-모듈 3 — I2C (Inter-Integrated Circuit)
-모듈 4 — SPI (Serial Peripheral Interface)
-모듈 5 — UART (시리얼 통신)
-모듈 6 — 타이머 / 카운터 / 인터럽트
-모듈 7 — 카메라 및 영상 처리 기초
-모듈 8 — 영상 처리 심화 및 컴퓨터 비전
-모듈 9 — NVIDIA Jetson AI / 딥러닝
-모듈 10 — 종합 프로젝트
-모듈 11 — I2S 디지털 오디오
-모듈 12 — 네트워크 프로그래밍
-모듈 13 — USB & 블루투스
-모듈 14 — CAN 통신
-모듈 15 — CUDA 기초
-모듈 16 — 시스템 프로그래밍
+[목차]
+   * 모듈 0 — 개발 환경 구축 및 시스템 초기화
+   * 모듈 1 — GPIO 디지털 입출력
+   * 모듈 2 — PWM (Pulse Width Modulation)
+   * 모듈 3 — I2C (Inter-Integrated Circuit)
+   * 모듈 4 — SPI (Serial Peripheral Interface)
+   * 모듈 5 — UART (시리얼 통신)
+   * 모듈 6 — 타이머 / 카운터 / 인터럽트
+   * 모듈 7 — 카메라 및 영상 처리 기초
+   * 모듈 8 — 영상 처리 심화 및 컴퓨터 비전
+   * 모듈 9 — NVIDIA Jetson AI / 딥러닝
+   * 모듈 10 — 종합 프로젝트
+   * 모듈 11 — I2S 디지털 오디오
+   * 모듈 12 — 네트워크 프로그래밍
+   * 모듈 13 — USB & 블루투스
+   * 모듈 14 — CAN 통신
+   * 모듈 15 — CUDA 기초
+   * 모듈 16 — 시스템 프로그래밍
 
 ---
 
