@@ -102,6 +102,12 @@ vncserver :1 -geometry 1920x1080 -depth 24
 ```
 cat /proc/device-tree/model
 ```
+
+```
+gotree94@gotree94-desktop2:~$ cat /proc/device-tree/model
+NVIDIA Jetson Nano Developer Kitgotree94@gotree94-desktop2:~$ 
+```
+
 출력 예시:
 ```
 NVIDIA Jetson Nano Developer Kit → Jetson Nano
