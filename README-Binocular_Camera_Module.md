@@ -148,6 +148,8 @@ sudo chown root:root /var/nvidia/nvcam/settings/camera_overrides.isp
 
 The camera module has an onboard ICM20948 9-axis sensor. Connect via the provided 4-pin cable to the Jetson Nano I2C pins:
 
+<img src="005.png">
+
 | ICM20948 | Jetson Nano Pin |
 |----------|-----------------|
 | SDA | Pin 3 |
