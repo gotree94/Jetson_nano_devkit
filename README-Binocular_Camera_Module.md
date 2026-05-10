@@ -869,7 +869,7 @@ rpicam-detect -t 0 -o cat%04d.jpg --lores-width 400 --lores-height 300 --post-pr
 
 ### Datasheet
 
-- [ICM20948 Datasheet](https://www.waveshare.com/w/upload/e/ef/ICM-20948-v1.3.pdf)
+- [ICM20948 Datasheet](https://files.waveshare.com/upload/1/18/DS-000189-ICM-20948-v1.3.pdf)
 
 ---
 
