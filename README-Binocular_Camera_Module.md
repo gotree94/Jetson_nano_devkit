@@ -6,8 +6,13 @@
    * https://www.waveshare.com/wiki/IMX219-83_Stereo_Camera
  
 ## IMX219-83 Stereo Camera
+### Waveshare IMX219-83 Stereo Camera Module
 
-# Waveshare IMX219-83 Stereo Camera Module
+<img src="001.png" width="30%"> <br>
+<img src="002.png" width="30%"> <br>
+<img src="003.png" width="30%"> <br>
+<img src="004.png" width="30%"> <br>
+<img src="005.png" width="30%"> <br>
 
 ## Overview
 
